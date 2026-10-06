@@ -26,6 +26,7 @@ build:
   ignore_run_exports:
     - qt-main
     - libboost-devel
+    - libbrotlienc
 
 requirements:
   build:
@@ -44,6 +45,7 @@ requirements:
     - perl 5
     - gettext-tools
     - gobject-introspection 1.*  # [not win]
+    - brotli      # [build_platform != target_platform]
     - cairo       # [build_platform != target_platform]
     - curl        # [build_platform != target_platform]
     - fontconfig  # [build_platform != target_platform]
@@ -64,6 +66,7 @@ requirements:
     - zlib        # [build_platform != target_platform]
     - gperf       # [unix]
   host:
+    - brotli
     - cairo
     - curl
     - expat
